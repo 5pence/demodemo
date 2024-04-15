@@ -1,0 +1,496 @@
+/*override browser default styles*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+font-size: 14px;
+}
+h2 {
+font-size: 14px;
+}
+
+/* define brittanysignature font */
+@font-face {
+font-family: brittanysignature;
+src: url(../fonts/BrittanySignature.ttf);
+font-display: swap;
+}
+
+/*set page default font and font colour*/
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #4E5453;
+}
+
+section {
+padding: 0;
+margin: 0;
+}
+
+/* style header */
+
+#header-navbar, #footer-social {
+font-size: 16px;
+background-color: #C3D4CA;
+color: #4E5453;
+}
+
+/*override default link colour and underline*/
+#header-navbar a, #footer-social a {
+color: #4E5453;
+text-decoration: none;
+}
+
+#header-navbar {
+padding: 0.2em 0;
+}
+
+#header-navbar ul, #footer-social ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+#header-navbar li, #footer-social li {
+  flex: 1;
+  text-align: center;
+  margin: 10px;
+}
+
+#header-navbar #header-logo {
+  order: -1; /* move logo to the beginning */
+  text-align: left;
+  font-family: BrittanySignature;
+  font-size: 18px;
+transform: rotate(358deg);
+font-weight: bolder;
+flex-grow: 2;
+}
+
+
+/* style hero section */
+
+#hero {
+  width: 100%;
+  position: relative;
+}
+
+#hero img {
+  padding: 0;
+  margin: 0;
+  width: 100%; 
+  height: auto; 
+  display: block; 
+}
+
+#hero-text-title {
+  position: absolute; 
+  top: 39%; 
+  left: 31%; 
+  right: 20%;
+  max-width: 80px;
+  font-family: brittanysignature;
+  font-size: 14px;
+  font-weight: bolder;
+  transform: rotate(350deg);
+}
+
+#hero-text-container {
+  position: absolute; 
+  top: 50%; 
+  left: 33%; 
+  right: 17%;
+  font-size: 12px;
+  width: 160px;
+}
+
+
+
+/*hide overflow text for smaller screens*/
+
+#hero-text-2, #hero-text-3 {
+opacity: 0;
+}
+
+/* style about me section */
+
+#about-me-container {
+background-color: #E5BF95;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+}
+
+#about-me-text {
+max-width: 270px;
+margin-top: 2em;
+margin-bottom: 2em;
+padding: 1em;
+border-radius: 15px;
+display: block;
+}
+
+#me-pic {
+max-width: 270px;
+padding: 1em;
+display: block;
+align-self: center;
+}
+#me-pic img {
+max-width: 100%;
+display: block;
+justify-content: center;
+border-radius: 15px;
+}
+
+#about-me-title {
+background-color: #C3D4CA;
+font-size: 14px;
+font-weight: bold;
+padding: 1em;
+}
+
+#about-me-text {
+background-color: #DCE3DE;
+font-size: 0.8em;
+padding: 1em;
+padding-left: 1.25em;
+}
+
+/* style learn to crochet section */
+
+#learn-to-crochet {
+background-color: #C3D4CA;
+}
+
+/* #learn-to-crochet-container {
+object-fit: cover;
+} */
+
+.learn-resources-text {
+background-color: #C3D4CA;
+font-size: 1em;
+padding: 1em;
+}
+
+.beginner-resources-container {
+background-color: #DCE3DE;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+}
+
+.beginner-resource {
+font-size: 0.8em;
+background-color: #DCE3DE;
+max-width: 250px;
+margin: 2em;
+display: block;
+}
+
+.beginner-video{
+font-size: 0.8em;
+background-color: #DCE3DE;
+max-width: 300px;
+margin-top: 2em;
+margin-bottom: 2em;
+display: block;
+}
+
+#beginner-resource-img1, #beginner-resource-img2 {
+width: 100%;
+display: block;
+justify-content: center;
+}
+
+.youtube-iframe-and-text {
+overflow: hidden;
+padding-top: 43%; /* aspect ratio not quite right but close */
+position: relative;
+} 
+
+.youtube-iframe-and-text iframe {
+position: absolute;
+top: 0;
+border: 0;
+width: 100%;
+height: 100%;
+}
+
+/* style latest projects section */
+
+#latest-projects-container {
+background-color: #DCE3DE;
+}
+
+.latest-projects-text {
+background-color: #C3D4CA;
+font-size: 1em;
+padding: 1em;
+}
+
+.projects-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+}
+
+.project {
+font-size: 0.8em;
+background-color: #DCE3DE;
+max-width: 250px;
+margin: 2em;
+display: block;
+}
+
+#project-img1, #project-img2, #project-img3 {
+width: 100%;
+display: block;  
+}
+
+#project-img3 {
+width: 100%;
+max-height: 300px;
+}
+
+
+/* style patterns page */
+
+#patterns-container {
+background-color: #DCE3DE;
+}
+
+.patterns-text {
+background-color: #DCE3DE;
+padding: 20px;
+}
+
+.pattern-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+}
+
+#beginner-patterns, #intermediate-patterns {
+background-color: #DCE3DE;
+}
+
+.pattern-container-text {
+padding-left: 20px;
+}
+
+.pattern {
+background-color: #DCE3DE;
+max-width: 250px;
+margin: 2em;
+display: block;
+}
+
+#pattern-img1, #pattern-img2, #pattern-img3 {
+width: 100%;
+display: block;
+}
+
+.pattern-text {
+text-align: center;
+}
+
+/* style club page */
+
+#crochet-club {
+background-color: #BCAE93;
+color: #1e2020;
+border: 2px solid;
+border-color: #9F8F82;
+}
+
+#crochet-club h2 {
+font-size: 1.25rem;
+}
+
+#meetups div {
+font-size: 1rem;
+text-align: center;
+}
+
+#times {
+display: flex;
+flex-wrap: wrap;
+}
+
+#times div {
+color: #1e2020;
+margin: 15px;
+padding: 15px;
+text-align: center;
+flex-basis: 200px;
+flex-grow: 1;
+border: 2px solid;
+border-color: antiquewhite;
+}
+
+#abs-beginners {
+background-image: url("../images/beginners-meetup.webp");
+}
+
+#amigurumi {
+background-image: url("../images/amigurumi.webp");
+background-position: right center;
+background-size: 100%;
+}
+
+#stitchnbitch {
+background-image: url("../images/stitchnbitch.webp");
+}
+
+.club-form-container {
+padding: 1em;
+text-align: center;
+}
+
+#crochet-club h2 {
+text-align: center;
+color: #1e2020;
+}
+
+input, textarea {
+padding: 0.2em;
+border-width: 1px;
+border-style: none;
+background-color: #D3C9C0;
+}
+
+button {
+padding:5px;
+border-style: solid;
+border-width: 1px;
+border-color: #4E5453;
+border-radius: 4px;
+background-color: #D3C9C0;
+color: #1e2020;
+}
+
+input[type=radio] {
+accent-color: #4E5453;
+}
+
+ 
+
+/* Increase header font size for tablets landscape*/
+@media (min-width: 768px) {
+#header-navbar {
+  font-size: 130%;
+}
+}
+
+/* Increase header font size for desktop screens */
+@media (min-width: 1024px) {
+#header-navbar {
+  font-size: 140%;
+}
+}
+
+/* Increase hero text size for tablets portrait */
+@media (min-width: 481px) {
+  #hero-text-container {
+    width: 245px;
+    font-size: 12px;
+  }
+  #hero-text-title {
+    font-size: 14px;
+  } 
+  #hero-text-1, #hero-text-2, #hero-text-3 {
+    padding-top: 15px;
+  }
+} 
+
+/* Increase hero text size and unhide text2 for tablets landscape */
+@media (min-width: 768px) {
+#hero-text-container {
+  left: 29%;
+  width: 400px;
+  font-size: 14px;
+}
+#hero-text-title {
+  top: 41%;
+  left: 31%;
+  font-size: 20px;
+  max-width: 120px;
+}  
+#hero-text-1, #hero-text-2, #hero-text-3 {
+  padding-top: 15px;
+  opacity: 1;
+}
+} 
+
+/* Increase hero text size and unhide text2 for smaller desktop screens */
+@media (min-width: 1024px) {
+#hero-text-container {
+  left: 28%;
+  width: 650px;
+  font-size: 20px;
+}
+#hero-text-title {
+  max-width: 150px;
+  font-size: 26px;
+}  
+#hero-text-1, #hero-text-2, #hero-text-3 {
+  padding-top: 15px;
+  opacity: 1;
+}
+} 
+
+/* Increase hero text size and unhide text2 for larger desktop screens */
+@media (min-width: 1200px) {
+#hero-text-container {
+  top: 47%;
+  left: 31%;
+  width: 650px;
+  font-size: 20px;
+}
+#hero-text-title {
+  max-width: 150px;
+  font-size: 28px;
+}  
+#hero-text-1, #hero-text-2, #hero-text-3 {
+  padding-top: 15px;
+  opacity: 1;
+}
+}
+
+/* Increase aboutme font size for tablets portrait */
+@media (min-width: 481px) {
+#about-me-text {
+  max-width: 300px;
+  font-size: 12px;
+}
+#header-navbar {
+  font-size: 120%;
+}
+}  
+
+/* Increase aboutme font size for tablets landscape*/
+@media (min-width: 768px) {
+#about-me-text {
+  max-width: 350px;
+font-size: 14px;
+}
+}
+
+/* Increase aboutme font size for desktop screens */
+@media (min-width: 1024px) {
+#about-me-text {
+max-width: 400px;
+font-size: 20px;
+}
+#me-pic {
+  max-width: 400px;
+}
+#about-me-title {
+  font-size: 20px;
+}
+}

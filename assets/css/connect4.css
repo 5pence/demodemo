@@ -1,0 +1,88 @@
+/* style.css */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+.game-container {
+  display: flex;
+  flex-direction: column; /* Stack arrow row and game board vertically */
+  align-items: center; /* Center-align children */
+}
+.game-board {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr); /* 6 rows */
+  gap: 10px;
+  background-color: #007bff;
+  padding: 10px;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+}
+
+.game-row {
+  display: flex;
+}
+
+.game-cell {
+  width: 50px; /* Cell width */
+  height: 50px; /* Cell height */
+  background-color: #ffffff;
+  border-radius: 50%; /* Circular cells */
+  margin-right: 10px; /* Space between cells */
+  flex: 1; /* Ensure cells fill the row evenly */
+}
+
+.game-cell:last-child {
+  margin-right: 0; /* Remove margin for the last cell in a row */
+}
+
+.arrow-row {
+  display: flex;
+  justify-content: center;
+}
+.arrow, .game-cell {
+  width: 50px; /* Ensure this matches the game-cell width */
+  height: 50px; /* Adjust the height as needed for arrows */
+  margin-right: 10px; /* Match the spacing of the game cells */
+}
+
+.arrow:last-child, .game-cell:last-child {
+  margin-right: 0; /* Remove the margin for the last element */
+}
+.arrow {
+  cursor: pointer;
+  font-size: 24px; /* Adjust the size of the arrow */
+  color: #007bff; /* Arrow color */
+  user-select: none; /* Prevents the text from being selectable */
+  margin: 0 5px;
+}
+.piece {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+@keyframes drop {
+  0% {
+      transform: translateY(-500px); /* Start from above the board */
+      
+  }
+  100% {
+      transform: translateY(0);
+      
+  }
+}
+
+.game-cell .piece {
+  animation: drop 1s ease-out; /* Adjust timing as needed */
+}
