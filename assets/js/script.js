@@ -15,7 +15,7 @@ const questions = [
   {
     "question": "What day new years eve?",
     "answers": [
-      "December 30th", "December 31st", "January 1", "Decmber 25th"
+      "assets/images/face1.jpg", "December 31st", "January 1", "Decmber 25th"
     ],
     "correct": 1
   },

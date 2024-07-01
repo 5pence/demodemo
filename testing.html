@@ -1,60 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-  .container {
-    display: grid;
-    grid-template-columns: 1fr; /* Single column layout for small screens */
-    max-width: 1080px;
-    width: 100%;
-    margin: 0 auto;
-  }
-  .full-width {
-    width: 100%;
-    margin: 1rem;
-    padding: 1rem;
-    background-color: blueviolet;
-  }
-  .green-box {
-    background-color: aquamarine;
-    padding: 1rem;
-    margin: 1rem;
-    box-shadow: 5px 10px rgba(112,112,112, 0.1);
-  }
-
-  .blue-box {
-    background-color: azure;
-    padding: 1rem;
-    margin: 1rem;
-  }
-
-  @media (min-width: 768px) {
-    .container {
-      grid-template-columns: 1fr 1fr; /* Two column layout for larger screens */
-    }
-    .column1 { grid-column: 2; } /* Put column 1 on the right */
-    .column2 { grid-column: 1; } /* Put column 2 on the left */
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Basics Project</title>
 </head>
 <body>
-
-<div class="container">
-  <div class="green-box column2">
-    <h2>uuwhed uwh euhweudh uweh d</h2>
-    <p>qouiwehd iuqwehdiuweh iuwhe fdiuh weiuf hiwueh fihu weiufh iuwehfiuwe hfuihwiuefh iuweh fiuh wef, iuqwehdiuweh iuwhe fdiuh weiuf hiwueh fihu weiufh iuwehfiuwe hfuihwiuefh iuweh fiuh wef. iuqwehdiuweh iuwhe fdiuh weiuf hiwueh fihu weiufh iuwehfiuwe hfuihwiuefh iuweh fiuh wef. iuqwehdiuweh iuwhe fdiuh weiuf hiwueh fihu weiufh iuwehfiuwe hfuihwiuefh iuweh fiuh wef. iuqwehdiuweh iuwhe fdiuh weiuf hiwueh fihu weiufh iuwehfiuwe hfuihwiuefh iuweh fiuh wef</p>
-  </div>
-  <div class="blue-box column1">
-    <h2>uuwhed uwh euhweudh uweh d</h2>
-    <p>qouiwehd iuqwehdiuweh iuwhe fdiuh weiuf hiwueh fihu weiufh iuwehfiuwe hfuihwiuefh iuweh fiuh wef, iuqwehdiuweh iuwhe fdiuh weiuf hiwueh fihu weiufh iuwehfiuwe hfuihwiuefh iuweh fiuh wef. iuqwehdiuweh iuwhe fdiuh weiuf hiwueh fihu weiufh iuwehfiuwe hfuihwiuefh iuweh fiuh wef. iuqwehdiuweh iuwhe fdiuh weiuf hiwueh fihu weiufh iuwehfiuwe hfuihwiuefh iuweh fiuh wef. iuqwehdiuweh iuwhe fdiuh weiuf hiwueh fihu weiufh iuwehfiuwe hfuihwiuefh iuweh fiuh wef</p>
-  </div>
-  <div class="full-width">
-    <h2>oiwqhjedoihhhoiw hoiwhdowh ed</h2>
-    <p>qouiwehd iuqwehdiuweh iuwhe fdiuh weiuf hiwueh fihuiwdj ijwd ijwdicj iwdcj ijwd cijwdcj iw jdcijw dcijw dci jwdic jwdiw jiwdj cij wdic jwd</p>
-  </div>
-</div>
-
+    <div id="content"></div>
+    <button id="changeButton">Change Content</button>
+    <script>
+        // JS Object and Array
+        const data = {
+            items: ["Item 1", "Item 2", "Item 3"],
+        };
+        // Function with a parameter
+        function updateContent(content) {
+            document.getElementById("content").innerText = content;
+        }
+        // Loop
+        let combinedText = "";
+        for (let i = 0; i < data.items.length; i++) {
+            combinedText += data.items[i] + " ";
+        }
+        // If else statement
+        if (combinedText) {
+            updateContent(combinedText);
+        } else {
+            updateContent("No items to display");
+        }
+        // Event listener
+        document.getElementById("changeButton").addEventListener("click", () => {
+            // Switch case
+            switch (document.getElementById("content").innerText) {
+                case "Item 1 Item 2 Item 3 ":
+                    updateContent("Content Changed!");
+                    break;
+                default:
+                    updateContent(combinedText);
+                    break;
+            }
+        });
+    </script>
 </body>
 </html>
